@@ -16,4 +16,4 @@ The testing suite tests all of the functionality of the game, including:
 
 ### Languages and Libraries Used
 - **JavaScript ES6:** Modular, reusable code that follows SRP (Single Responsibility Principle)
-- **Testing: Chai & Mocha**
+- **Testing Suite: Chai & Mocha**
