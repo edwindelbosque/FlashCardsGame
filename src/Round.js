@@ -13,9 +13,8 @@ class Round {
 
   takeTurn(guess) {
     const turn = new Turn(guess, this.returnCurrentCard());
-    this.turnCount++;
-    turn.evaluateGuess();
     !turn.evaluateGuess() && this.incorrectGuesses.push(this.returnCurrentCard().id);
+    this.turnCount++;
     return turn.giveFeedback();
   }
 
@@ -25,10 +24,9 @@ class Round {
 
   endRound() {
     if (this.turnCount >= this.deck.cards.length) {
-      return `** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`;
+      console.log(`** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`);
     }
   }
 }
-
 
 module.exports = Round;
